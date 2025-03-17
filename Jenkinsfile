@@ -9,7 +9,9 @@ pipeline {
         stage('Clone Repository') {
             steps {
                 // Clone the GitHub repository
-                git 'https://github.com/Mkashaaf11/jenkins_test.git'
+                echo "cloning"
+                git url: 'https://github.com/Mkashaaf11/jenkins_test.git', branch : "master"
+                echo "Cloned"
             }
         }
 
